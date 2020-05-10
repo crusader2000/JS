@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Animate Icons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #chain,
+        #battery,
+        #hourglass {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chain" class="fa"></div>
+    <br>
+    <br>
+    <div id="battery" class="fa"></div>
+    <br>
+    <br>
+    <div id="hourglass" class="fa"></div>
+
+    <script>
+        //Break Chain Animaion
+        function breakChain() {
+            let chain = document.getElementById('chain');
+            chain.innerHTML = "&#xf0c1;";
+
+            setTimeout(function() {
+                chain.innerHTML = "&#xf127";
+            }, 1000);
+        }
+
+        //Call Animation
+        breakChain();
+
+        //Animate every 2 seconds
+        setInterval(breakChain, 2000);
+
+        // Battery Charge Animation
+        function chargeBattey() {
+            let battery = document.getElementById('battery');
+            battery.innerHTML = "&#xf244";
+
+            setTimeout(() => {
+                battery.innerHTML = "&#xf243";
+
+            }, 1000);
+
+
+            setTimeout(() => {
+                battery.innerHTML = "&#xf242";
+            }, 2000);
+
+            setTimeout(() => {
+                battery.innerHTML = "&#xf241";
+            }, 3000);
+
+            setTimeout(() => {
+                battery.innerHTML = "&#xf240";
+            }, 4000);
+        }
+
+        //Run Animation
+        chargeBattey();
+
+        //Animate every 5 seconds
+        setInterval(chargeBattey, 5000);
+
+        function hourGlassTip() {
+            let hourglass = document.getElementById('hourglass');
+            hourglass.innerHTML = "&#xf251"
+
+            setTimeout(() => {
+                hourglass.innerHTML = "&#xf252";
+
+            }, 1000);
+            setTimeout(() => {
+                hourglass.innerHTML = "&#xf253";
+            }, 2000);
+
+
+        }
+
+        hourGlassTip();
+
+        setInterval(hourGlassTip, 3000);
+    </script>
+</body>
+
+</html>
